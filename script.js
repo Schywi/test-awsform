@@ -1,6 +1,6 @@
 function submitToAPI(e) {
     e.preventDefault();
-    var URL = "https://htecwms4i2.execute-api.us-east-2.amazonaws.com/contact-us";
+    var URL = "https://htecwms4i2.execute-api.us-east-2.amazonaws.com/1";
 
          var Namere = /[A-Za-z]{1}[A-Za-z]/;
          if (!Namere.test($("#name-input").val())) {
@@ -36,11 +36,12 @@ function submitToAPI(e) {
 
     $.ajax({
       type: "POST",
-      url : "https://htecwms4i2.execute-api.us-east-2.amazonaws.com/contact-us",
-      dataType: "json",
-      crossDomain: "true",
+      url : "https://htecwms4i2.execute-api.us-east-2.amazonaws.com/1",
+      crossDomain: true,
+      dataType: 'json',
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify(data),
+   
 
       
       success: function () {
