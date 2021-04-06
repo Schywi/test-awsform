@@ -37,9 +37,9 @@ function submitToAPI(e) {
     $.ajax({
       type: "POST",
       url : "https://htecwms4i2.execute-api.us-east-2.amazonaws.com/1/send",
-      crossDomain: true,
+     
       dataType: 'json',
-      contentType: "application/json; charset=utf-8",
+      contentType: "application/json",
       data: JSON.stringify(data),
    
 
